@@ -52,31 +52,42 @@ export default {
             buttonSubmit: 'Create account'
         },
         navbar: {
+            osf: 'OSF',
+            openScienceFramework: 'Open Science Framework',
             add: 'Add',
-            addAPreprint: 'Add a {{preprintWords.preprint}}',
+            addAPreprint: 'Add a {{preprintWords.Preprint}}',
             browse: 'Browse',
             cancelSearch: 'Cancel search',
+            dashboard: 'Dashboard',
             donate: 'Donate',
             goHome: 'Go home',
+            meetings: 'Meetings',
             myProjects: 'My Projects',
             myQuickFiles: 'My Quick Files',
+            newProjects: 'New Projects',
+            preprints: 'Preprints',
+            registries: 'Registries',
             reviews: 'My Reviewing',
             search: 'Search',
             searchHelp: 'Search help',
+            altSearchOSF: 'Search OSF',
             searchTheOSF: 'Search the OSF',
             sendSearch: 'Send search query',
             support: 'Support',
+            toggleNavigation: 'Toggle navigation',
             togglePrimary: 'Toggle primary navigation',
             toggleSecondary: 'Toggle secondary navigation',
         },
         authDropdown: {
-            logOut: 'Log out',
+            logOut: 'Log Out',
             myProfile: 'My Profile',
+            support: 'Support',
             osfSupport: 'OSF Support',
             settings: 'Settings',
             signUp: 'Sign Up',
-            signIn: 'Sign in',
-            toggleAuthDropdown: 'Toggle auth dropdown'
+            signIn: 'Sign In',
+            toggleAuthDropdown: 'Toggle auth dropdown',
+            altUserGravatar: 'User gravatar'
         },
         searchHelpModal: {
             close: 'Close',
@@ -86,6 +97,37 @@ export default {
             searchSyntax: 'search syntax',
             helpDescription: 'This gives you many options, but can be very simple as well. Examples of valid searches include:'
         },
+        projectNavbar: {
+            toggleNavigation: 'Toggle navigation',
+            navigation: 'Navigation',
+            privateParentMessage: 'Parent project is private',
+            files: 'Files',
+            wiki: 'Wiki',
+            analytics: 'Analytics',
+            registrations: 'Registrations',
+            forks: 'Forks',
+            contributors: 'Contributors',
+            settings: 'Settings',
+            comments: 'Comments'
+        },
+        footer: {
+            osf: 'OSF',
+            explore: 'Explore',
+            faqGuides: 'FAQ/Guides',
+            api: 'API',
+            sourceCode: 'Source Code',
+            centerForOpenScience: 'Center for Open Science',
+            home: 'Home',
+            reproducibilityProjectPsychology: 'Reproducibility Project: Psychology',
+            reproducibilityProjectBiology: 'Reproducibility Project: Cancer Biology',
+            topGuidelines: 'TOP Guidelines',
+            donate: 'Donate',
+            socialize: 'Socialize'
+        },
+        osfModeFooter: {
+            warning: 'WARNING',
+            runningInDevelopmentMode: ': This site is running in development mode.'
+        },
         components: {
             searchResult: {
                 addedOn: 'Added on',
@@ -94,6 +136,31 @@ export default {
                 withdrawn: 'Withdrawn'
 
             },
+            citationWidget: {
+                apa: 'APA',
+                mla: 'MLA',
+                chicago: 'Chicago',
+                getMoreCitations: 'Get more citations',
+                loadingMessage: 'Searching...',
+                noMatchesMessage: 'No matches found.',
+                searchMessage: 'Please enter a few characters'
+            },
+            commenting: {
+                commentDetail: {
+                    commentDeleted: 'Comment deleted',
+                    restore: 'Restore',
+                    edit: 'Edit',
+                    delete: 'Delete',
+                    report: 'Report'
+                },
+                commentForm: {
+                    addComment: 'Add comment'
+                },
+                commentPane: {
+                    comments: 'Comments',
+                    none: '(none)'
+                }
+            },
             discoverPage: {
                 activeFilters: {
                     heading: 'Active Filters',
@@ -101,6 +168,7 @@ export default {
                 },
                 search: 'Search',
                 searchPlaceholder: 'Search...',
+                share: 'SHARE',
                 poweredBy: 'powered by',
                 noResults: 'No results. Try removing some filters.',
                 asOf: 'as of',
@@ -125,7 +193,127 @@ export default {
                 funder: `Funder`,
                 language: `Language`,
                 people: `People`
-
+            },
+            fileBrowser: {
+                upload: 'Upload',
+                share: 'Share',
+                loading: 'Loading...',
+                download: 'Download',
+                view: 'View',
+                move: 'Move',
+                delete: 'Delete',
+                rename: 'Rename',
+                deleteMultiple: 'Delete multiple',
+                downloadZip: 'Download as zip',
+                filter: 'Filter',
+                name: 'Name',
+                size: 'Size',
+                version: 'Version',
+                downloads: 'Downloads',
+                modified: 'Modified',
+                modals: {
+                    irreversibleMessage: 'This action is irreversible.',
+                    instructions: {
+                        howToUse: 'How to use the file browser',
+                        upload: 'Upload:',
+                        uploadMessage: 'Single file uploads via drag and drop or by clicking the upload button.',
+                        select: 'Select rows:',
+                        selectMessage: 'Click on a row to show further actions in the toolbar. Use Command or Shift keys to select multiple files.',
+                        folders: 'Folders:',
+                        foldersMessage: 'Not supported; consider an OSF project for uploading and managing many files.',
+                        openFile: 'Open files:',
+                        openFileMessage: 'Click a file name to go to view the file in the OSF.',
+                        openFileTab: 'Open files in new tab:',
+                        openFileTabMessage: 'Press Command (Ctrl in Windows) and click a file name to open it in a new tab.',
+                        downloadZip: 'Download as zip:',
+                        downloadZipMessage: 'Click the Download as Zip button in the toolbar to download all files as a .zip.',
+                        close: 'Close'
+                    },
+                    deleteItem: {
+                        deleteMessageStart: 'Delete "',
+                        deleteMessageEnd: '" ?',
+                        buttons: {
+                            cancel: 'Cancel',
+                            delete: 'Delete'
+                        }
+                    },
+                    deleteMultiple: {
+                        deleteMessage: 'Delete multiple?',
+                        buttons: {
+                            cancel: 'Cancel',
+                            delete: 'Delete'
+                        }
+                    },
+                    renameConflict: {
+                        conflictMessageStart: 'An item named ',
+                        conflictMessageEnd: ' already exists in this location.',
+                        keepBoth: '"Keep Both" will retain both files (and their version histories) in this location.',
+                        replace: '"Replace" will overwrite the existing file in this location. You will lose previous versions of the overwritten file. You will keep previous versions of the moved file.',
+                        buttons: {
+                            cancel: 'Cancel',
+                            keepBoth: 'Keep Both',
+                            replace: 'Replace'
+                        }
+                    },
+                    moveFile: {
+                        moveFileMessage: 'Move file to project',
+                        buttons: {
+                            cancel: 'Cancel',
+                            back: 'Back',
+                            moveFile: 'Move file'
+                        }
+                    }
+                },
+                dropzoneWidget: {
+                    uploadText: 'Drop file to upload',
+                    placeholderText: 'Drop files here to upload',
+                    userHasNotUploadedFiles: 'This user has not uploaded any quickfiles'
+                }
+            },
+            fileChooser: {
+                dragAndDropMessage: 'You can also drag and drop a file from your computer.',
+                error: 'Error: ',
+                chosenFiles: 'Chosen files'
+            },
+            fileEditor: {
+                edit: 'Edit',
+                revert: 'Revert',
+                save: 'Save'
+            },
+            fileWidget: {
+                loginToOSF: 'Login to OSF',
+                chooseAnOSFProject: 'Choose an OSF project:',
+                back: 'Back'
+            },
+            licensePicker: {
+                chooseALicense: 'Choose a license:',
+                required: '(required)',
+                licenseFAQ: 'License FAQ',
+                year: 'Year:',
+                copyrightHolders: 'Copyright Holders:',
+                save: 'Save',
+            },
+            maintenanceBanner: {
+                times: 'x',
+                notice: 'Notice:',
+                willUndergoMaintenance: 'The site will undergo maintenance between',
+                and: 'and',
+                thankYou: 'Thank you for your patience.'
+            },
+            oauthPopup: {
+                login: 'Login'
+            },
+            osfCopyright: {
+                copyright: 'Copyright © 2011-',
+                centerForOpenScience: 'Center for Open Science',
+                termsOfUse: 'Terms of Use',
+                privacyPolicy: 'Privacy Policy'
+            },
+            paginationControl: {
+                previous: 'Previous',
+                next: 'Next',
+                page: 'Page',
+                of: 'of'
             },
             querySyntax: {
                 couldNotPerformQuery: "Could not perform search query.",

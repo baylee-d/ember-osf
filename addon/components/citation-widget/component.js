@@ -31,6 +31,7 @@ const citationStyles = [
  */
 export default Ember.Component.extend({
     layout,
+    i18n: Ember.inject.service(),
     apa: null,
     chicago: null,
     mla: null,
